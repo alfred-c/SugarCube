@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= require twitter/bootstrap
 */
 
 .container {
@@ -42,7 +43,7 @@ section h1 {
 /* Links */
 
 a {
-  color: #09c;
+  color: #069;
   text-decoration: none;
 }
 
@@ -81,10 +82,11 @@ nav ul li {
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
+  color: rgb(242, 57, 150);
 }
 
 nav ul li a:visited {
-  color: rgb(242, 57, 150);
+  color: rgb(202, 34, 24);
 }
 
 nav ul li a:hover {
