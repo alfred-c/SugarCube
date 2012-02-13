@@ -23,6 +23,8 @@ gem 'less-rails-bootstrap'
 
 gem 'annotate', '2.4.0'
 
+gem 'country-select', path: 'vendor/plugins/rails-country-select'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -37,3 +39,4 @@ gem 'annotate', '2.4.0'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
