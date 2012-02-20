@@ -1,5 +1,21 @@
 <h1>SugarCube Home</h1>
 <p>
-   This is the home page
+	This is the home page
 </p>
+<div style="border: solid">
+	<%= form_for "", :url => { :controller => 'sessions', :action => 'create' } do %>
+	Sign in
+	<div class="field">
+		<%= label_tag :email, 'Email:' %></br>
+		<%= text_field_tag :email, params[:email] %>
+	</div>
+	<div class="actions">
+		<%= submit_tag "Sign In" %>
+		<% if flash[:alert] %>
+		<%= flash[:alert] %>
+		<% end %>
+	</div>
+	<% end %>
+</div>
+
 <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>

@@ -1,5 +1,5 @@
 Sugarcube::Application.routes.draw do
-  
+
   root :to => 'pages#home'
   
   match '/contact', :to => 'pages#contact'
@@ -15,6 +15,10 @@ Sugarcube::Application.routes.draw do
   get "users/new"
 
   match '/signup',  :to => 'users#new'
+
+  resources :sessions
+  
+  match "/cube", :to => 'pages#cube'
 
 
 
