@@ -21,15 +21,27 @@
   </div>
   <div class="field">
   	<%= f.label :gender %>
-    <%= form_for @user do |f| %>
   	<%= f.select :gender, [['Male','male'],['Female','female']] %>
-  	<% end %>
   </div>
   <div class="field">
 	  <%= f.label :country %>
-	  <%= form_for @user do |f| %>
 	  <%= f.country_select :country %>
-	<% end %>
+  </div>
+  <div class="field">
+  	<%= f.label :status %>
+  	<%= f.select :status, [['Single','single'],['Happily attached','happily attached'], ['Wish I was single','wish I was single'], ["It's complicated","it's complicated"]] %>
+  </div>
+  <div class="field">
+    <%= f.label :looking_for, ('Looking for') %>
+    <%= f.text_field :looking_for %>
+  </div>
+  <div class="field">
+  	<%= f.label :shortest_relationship, ('Shortest relationship') %>
+  	<%= f.select :shortest_relationship, [['Less than 1 year','less than 1 year'],['Between 2 - 5 years','between 2 - 5 years'], ['More than 5 years','more than 5 years']] %>
+  </div>
+  <div class="field">
+  	<%= f.label :longest_relationship, ('Longest relationship') %>
+  	<%= f.select :longest_relationship, [['Less than 1 year','less than 1 year'],['Between 2 - 5 years','between 2 - 5 years'], ['More than 5 years','more than 5 years']] %>
   </div>
   <div class="actions">
     <%= f.submit %>
