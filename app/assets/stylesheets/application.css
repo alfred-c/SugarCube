@@ -92,23 +92,3 @@ nav ul li a:visited {
 nav ul li a:hover {
   text-decoration: underline;
 }
-
-.navbar-inner {
-	height: 45px;
-}
-
-.container {
-	height: 45px;
-}
-
-.nav {
-	height: 45px;
-	position: right;
-}
-
-.logo-text {
-	width: 45px;
-	height: 100%;
-	padding: 0px;
-	margin: 0px;
-}

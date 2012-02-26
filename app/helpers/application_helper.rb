@@ -11,6 +11,6 @@ module ApplicationHelper
   end
   
   def logo
-    image_tag("logo.png", :alt => "SugerCube", :style => "height: 75px; vertical-align: middle;")
+    image_tag("logo.png", :alt => "SugerCube", :class => "round")
   end
 end

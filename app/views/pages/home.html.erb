@@ -1,48 +1,21 @@
-<div class="span2">
-	<div class="well cube" style="height: 315px;">
-		<div class="text-vertical cube-text">Journals</div>
+<h1>SugarCube Home</h1>
+<p>
+	This is the home page
+</p>
+<div style="border: solid">
+	<%= form_for "", :url => { :controller => 'sessions', :action => 'create' } do %>
+	Sign in
+	<div class="field">
+		<%= label_tag :email, 'Email:' %></br>
+		<%= text_field_tag :email, params[:email] %>
 	</div>
-</div>
-<div class="span2">
-	<div class="well cube" style="height: 315px;">
-		<div class="text-vertical cube-text">SugarLine</div>
-	</div>
-</div>
-<div class="span2">
-	<div class="well cube" style="height: 315px;">
-		<div class="text-vertical cube-text">Sweethearts</div>
-	</div>
-</div>
-<div class="span2">
-	<div class="well cube" style="height: 315px;">
-		<div class="text-vertical cube-text">Polls</div>
-	</div>
-</div>
-<div class="span4">
-	<div class="well cube-border" style="padding-bottom:0px;">
-		<%= form_for "", :url => { :controller => 'sessions', :action => 'create' }  do %>
-		<fieldset>
-			<legend>Sign in</legend>
-			<div class="control-group">
-				<%= label_tag "", 'Email:', :class => "control-label" %>
-				<div class="controls">
-					<%= text_field_tag :email, params[:email], :class => "span3" %>
-				</div>
-			</div>
-			<div class="control-group">
-				<%= label_tag "", 'Password:', :class => "control-label" %>
-				<div class="controls">
-					<%= text_field_tag :password, params[:password], :class => "span3" %>
-				</div>
-			</div>
-			<%= button_tag "Sign in", :class =>"btn btn-primary" %>
-			<% if flash[:alert] %>
-			<%= flash[:alert] %>
-			<% end %>
-		</fieldset>
+	<div class="actions">
+		<%= submit_tag "Sign In" %>
+		<% if flash[:alert] %>
+		<%= flash[:alert] %>
 		<% end %>
 	</div>
-	<div class="well cube-border" style="padding-bottom:0px;">
-		<%= button_to "Sign up now!", signup_path, :method => "get", :class => "btn btn-primary" %>
-	</div>
+	<% end %>
 </div>
+
+<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
