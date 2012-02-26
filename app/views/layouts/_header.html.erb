@@ -1,8 +1,35 @@
 <header>
-    <%= link_to logo, root_path %>
-    <nav class="round">
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-      </ul>
-    </nav>
+    <!-- <%= link_to logo, root_path %>
+        <nav class="round">
+          <ul>
+            <li><%= link_to "Home", root_path %></li>
+          </ul>
+        </nav> -->
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar">
+	  <div class="navbar-inner">
+	    <div class="container">
+			<ul class="nav">
+			  <li class="active">
+			    <a class="brand" href="#">
+				  SugarCude
+				</a>
+			  </li>
+			  <li><a href="#">Link</a></li>
+			  <li class="divider-vertical"></li>
+			  <li><a href="#">Link</a></li>
+			  <li class="dropdown" id="accountmenu">
+			      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account Settings<b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			              <li><a href="#">Login</a></li>
+			                 <li><a href="#">Register</a></li>
+			                     <li class="divider"></li>
+			                     <li><a href="#">Logout</a></li>
+			           </ul>
+			   </li>
+			</ul>
+	    </div>
+	  </div>
+	</div>
+  </div>
 </header>
