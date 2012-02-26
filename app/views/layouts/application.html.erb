@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
   <head>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
@@ -21,4 +22,24 @@
       <%= render 'layouts/footer' %>
     </div>
   </body>
+=======
+<head>
+	<title><%= title %></title>
+	<%= csrf_meta_tag %>
+	<%= render 'layouts/stylesheets' %>
+</head>
+<body>
+	<div class="container">
+		<div class="row" style="padding: 25px 0px 25px 0px;">
+			<%= render 'layouts/header' %>
+		</div>
+		<div class="row">
+			<%= yield %>
+		</div>
+		<div class="row">
+			<%= render 'layouts/footer' %>
+		</span>
+	</div>
+</body>
+>>>>>>> styled the home page
 </html>

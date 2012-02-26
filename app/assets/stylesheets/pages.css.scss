@@ -1,3 +1,23 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cube {
+	background-color: #f23996 !important;
+}
+.cube-border {
+	border-bottom: 5px solid #f23996 !important;
+}
+.text-vertical {
+	-webkit-transform: rotate(90deg);	
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.cube-text{
+	color: #fff;
+	position: relative;
+	right: -50px;
+	top: 35px;
+	font-size: 18pt;
+}
