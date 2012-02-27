@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120220024607) do
+ActiveRecord::Schema.define(:version => 20120227224438) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20120220024607) do
     t.string   "looking_for"
     t.string   "shortest_relationship"
     t.string   "longest_relationship"
+    t.string   "salt"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
