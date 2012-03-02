@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
                     :uniqueness => { :case_sensitive => false }
   #validates :country, inclusion: { in: COUNTRY_NUMS }
   
-  before_save :encrypt_password
+  # before_save :encrypt_password
   
   class << self
     def authenticate(email)
@@ -43,9 +43,9 @@ class User < ActiveRecord::Base
       secure_hash("#{salt}--#{string}")
     end
     
-    def make_salt
-      secure_hash("#{Time.now.utc}--#{password}")
-    end
+    # def make_salt
+    #      secure_hash("#{Time.now.utc}--#{password}")
+    #    end
     
     def secure_hash(string)
       Digest::SHA2.hexdigest(string)
