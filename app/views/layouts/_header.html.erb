@@ -35,14 +35,3 @@
 		</div>
 	</div>
 </header>
-<!--Alfred's version below-->
-<div class="span8">
-    <h1><%= link_to logo, root_path %> SugarCube</h1>
-</div>
-<div class="span4">    
-    <ul class="nav nav-pills pull-right">
-        <% if session[:user_id] %>
-        <li><%= link_to "Logout", root_path %></li>
-        <% end %>
-    </ul>
-</div>
