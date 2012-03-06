@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_email(params[:email])
+    user = User.authenticate(params[:email],
+                             params[:password])
     if user
       sign_in user
       redirect_to cube_url

@@ -18,13 +18,18 @@ class User < ActiveRecord::Base
   validates :email, :presence => true,
                     :format => { :with => email_regex },
                     :uniqueness => { :case_sensitive => false }
+  validates :password, :presence => true,
+                    :confirmation => true,
+                    :length => { :within => 6..40 }
   #validates :country, inclusion: { in: COUNTRY_NUMS }
   
   # before_save :encrypt_password
   
   class << self
-    def authenticate(email)
+    def authenticate(email, submitted_password)
       user = find_by_email(email)
+      user1 = find_by_password(submitted_password)
+      (user == user1) ? user : nil
     end
 
     def authenticate_with_salt(id, cookie_salt)
@@ -34,10 +39,6 @@ class User < ActiveRecord::Base
   end
   
   private
-  
-    def encrypt_password
-      self.salt = make_salt
-    end
   
     def encrypt(string)
       secure_hash("#{salt}--#{string}")
