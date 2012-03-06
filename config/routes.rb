@@ -19,6 +19,8 @@ Sugarcube::Application.routes.draw do
   resources :sessions
   
   match "/cube", :to => 'pages#cube'
+  
+  match '/signout', :to => 'sessions#destroy'
 
 
 
