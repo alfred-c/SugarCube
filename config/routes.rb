@@ -1,5 +1,7 @@
 Sugarcube::Application.routes.draw do
 
+  resources :friendships
+
   root :to => 'pages#home'
   
   match '/contact', :to => 'pages#contact'
