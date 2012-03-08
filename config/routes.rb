@@ -17,6 +17,10 @@ Sugarcube::Application.routes.draw do
   get "users/new"
 
   match '/signup',  :to => 'users#new'
+  
+  get "users/findfriends"
+  
+  match '/findfriends', :to => 'users#findfriends'
 
   resources :sessions
   
