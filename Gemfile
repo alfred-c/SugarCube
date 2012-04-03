@@ -25,6 +25,14 @@ gem 'annotate', '2.4.0'
 
 gem 'country-select', path: 'vendor/plugins/rails-country-select'
 
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
+gem 'mocha'
+
+gem 'nifty-generators', '>= 0.4.0'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -40,3 +48,5 @@ gem 'country-select', path: 'vendor/plugins/rails-country-select'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+
+gem "mocha", :group => :test

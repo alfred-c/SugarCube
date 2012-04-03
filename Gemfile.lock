@@ -34,6 +34,7 @@ GEM
     activesupport (3.2.0.rc2)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    addressable (2.2.7)
     annotate (2.4.0)
     arel (3.0.2)
     builder (3.0.0)
@@ -49,6 +50,11 @@ GEM
     erubis (2.7.0)
     execjs (1.3.0)
       multi_json (~> 1.0)
+    faraday (0.7.6)
+      addressable (~> 2.2)
+      multipart-post (~> 1.1)
+      rack (~> 1.1)
+    hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -69,9 +75,31 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.17.2)
+    mocha (0.10.5)
+      metaclass (~> 0.0.1)
     multi_json (1.1.0)
+    multipart-post (1.1.5)
+    nifty-generators (0.4.6)
     nokogiri (1.5.0)
+    oauth (0.4.5)
+    oauth2 (0.5.2)
+      faraday (~> 0.7)
+      multi_json (~> 1.0)
+    omniauth (1.0.3)
+      hashie (~> 1.2)
+      rack
+    omniauth-facebook (1.2.0)
+      omniauth-oauth2 (~> 1.0.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-oauth2 (1.0.0)
+      oauth2 (~> 0.5.0)
+      omniauth (~> 1.0)
+    omniauth-twitter (0.0.9)
+      omniauth-oauth (~> 1.0)
     pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -129,6 +157,11 @@ DEPENDENCIES
   country-select!
   jquery-rails
   less-rails-bootstrap
+  mocha
+  nifty-generators (>= 0.4.0)
+  omniauth
+  omniauth-facebook
+  omniauth-twitter
   pg
   rails (= 3.2.0.rc2)
   sass-rails (~> 3.2.3)
