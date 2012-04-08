@@ -1,5 +1,7 @@
 Sugarcube::Application.routes.draw do
 
+  resources :journals
+
   resources :authentications
   
   match '/auth/:provider/callback' => 'authentications#create'
