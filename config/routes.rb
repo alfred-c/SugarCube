@@ -4,7 +4,7 @@ Sugarcube::Application.routes.draw do
 
   resources :authentications
   
-  match '/auth/:provider/callback' => 'authentications#create'
+  # match '/auth/:provider/callback' => 'authentications#create'
 
   resources :friendships
 
@@ -33,6 +33,8 @@ Sugarcube::Application.routes.draw do
   match "/cube", :to => 'pages#cube'
   
   match '/signout', :to => 'sessions#destroy'
+  
+  match '/auth/:provider/callback', :to => 'sessions#createFacebookUser'
 
 
 
