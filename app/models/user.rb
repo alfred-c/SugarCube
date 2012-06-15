@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   has_many :friendships
   has_many :friends, :through => :friendships
   
+  has_many :contents
+  
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
   validates :name, :presence => true,
