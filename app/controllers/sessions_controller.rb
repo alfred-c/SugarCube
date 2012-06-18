@@ -19,11 +19,11 @@ class SessionsController < ApplicationController
     user = User.find_by_fb_uid_and_fb_tokenfields(auth["uid"], auth["credentials"]["token"]) || User.create_with_omniauth(auth)
     session[:user_id] = user.id
 
-    redirect_to root_url
+    redirect_to inviateFB_path
   end
 
   def destroy
     sign_out
-    redirect_to root_path
+    redirect_to root_url
   end
 end

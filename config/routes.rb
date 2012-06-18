@@ -17,6 +17,8 @@ Sugarcube::Application.routes.draw do
   get "pages/home"
 
   get "pages/contact"
+  
+  post "pages/fb_invite_redirect"
 
   resources :users
   
@@ -27,6 +29,8 @@ Sugarcube::Application.routes.draw do
   get "users/findfriends"
   
   match '/findfriends', :to => 'users#findfriends'
+  
+  match '/inviateFB', :to => 'pages#invite_facebook_friends'
 
   resources :sessions
   
