@@ -14,8 +14,25 @@
 	width: 900px;
 }
 
-.cube {
+[class^="v-"],
+[class*=" v-"] {
+	padding: 10px;
+}
+.cube1 {
     background-color: #f23996 !important;
+}
+.cube2 {
+	background-color: #b43ee7 !important;
+}
+
+.cube3 {
+	background-color: #b3fa3b !important;
+}
+.cube4 {
+	background-color: #ffa93f !important;
+}
+.cube5 {
+	background-color: #38e08a !important;
 }
 .cube-border {
     border-bottom: 5px solid #f23996 !important;
@@ -37,4 +54,54 @@
 
 .caption {
   border-bottom: 5px solid #f23996 !important;
+}
+
+.tilerow
+{
+	float:left;
+}
+
+.tile
+{
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+
+[class^="v-"],
+[class*=" v-"] {
+	margin-bottom:10px;
+}
+.v-1
+{
+	height: 130px;
+
+}
+
+.v-2
+{
+	height: 290px;
+}
+
+[class^="h-"],
+[class*=" h-"] {
+	margin-left:10px;
+}
+.h-1
+{
+	width: 130px;
+}
+
+.h-2
+{
+	width: 290px;
+}
+
+.bug
+{
+	position: absolute;
+	top: 50px;
+	right: 20px;
+	z-index: 1000;
 }

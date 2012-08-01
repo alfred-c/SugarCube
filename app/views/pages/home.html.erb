@@ -1,21 +1,55 @@
-<div class="span2">
-	<div class="well cube" style="height: 315px;">
-		<div class="text-vertical cube-text">Journals</div>
+<div id="cubes">
+	<div class=" item cube1 h-1 v-2" >
 	</div>
-</div>
-<div class="span2">
-	<div class="well cube" style="height: 315px;">
-		<div class="text-vertical cube-text">SugarLine</div>
+	<div class=" item cube5 h-1 v-1">
 	</div>
-</div>
-<div class="span2">
-	<div class="well cube" style="height: 315px;">
-		<div class="text-vertical cube-text">Sweethearts</div>
+	<div class=" item cube4 h-2 v-2 ">
 	</div>
-</div>
-<div class="span2">
-	<div class="well cube" style="height: 315px;">
-		<div class="text-vertical cube-text">Polls</div>
+	<div class=" item cube2 h-1 v-1">
+	</div>
+	<div class=" item cube4 h-1 v-1">
+	</div>
+	<div class=" item cube1 h-2 v-2">
+	</div>
+	<div class="item  cube3 h-1 v-2">
+	</div>
+	<div class="item  cube5 h-1 v-1">
+	</div>
+	<div class="item  cube4 h-1 v-1">
+	</div>
+	<div class="item  cube2 h-2 v-1">
+	</div>
+	<div class="item  cube1 h-1 v-1">
+	</div>
+	<div class="item  cube1 h-1 v-1">
+	</div>
+	<div class="item  cube3 h-2 v-1">
+	</div>
+	<div class="item  cube5 h-1 v-1">
+	</div>
+	<div class="item  cube1 h-1 v-1">
+	</div>
+	<div class="item  cube4 h-1 v-1">
+	</div>
+	<div class=" item cube1 h-1 v-1">
+	</div>
+	<div class=" item cube2 h-2 v-2">
+	</div>
+	<div class="item  cube4 h-1 v-2">
+	</div>
+	<div class="item  cube1 h-1 v-2">
+	</div>
+	<div class=" item cube2 h-1 v-1">
+	</div>
+	<div class=" item cube5 h-1 v-2">
+	</div>
+	<div class=" item cube4 h-1 v-1">
+	</div>
+	<div class=" item cube1 h-1 v-1">
+	</div>
+	<div class=" item cube1 h-1 v-1">
+	</div>
+	<div class=" item cube3 h-1 v-1">
 	</div>
 </div>
 <div class="span4">
@@ -47,3 +81,12 @@
 		<%= button_to "Sign up now!", signup_path, :method => "get", :class => "btn btn-primary" %>
 	</div>
 </div>
+<script type="text/javascript">
+$(function(){
+	$("#cubes").isotope({
+		itemSelector: '.item',
+		layoutMode: 'masonry'
+	});
+
+});
+</script>
