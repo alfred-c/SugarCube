@@ -10,9 +10,15 @@ Sugarcube::Application.routes.draw do
 
   resources :authentications
   
-  # match '/auth/:provider/callback' => 'authentications#create'
-
   resources :friendships
+  
+  resources :topics do
+    resources :posts
+  end
+
+  resources :forums do
+    resources :topics
+  end
 
   root :to => 'pages#home'
   
@@ -45,8 +51,6 @@ Sugarcube::Application.routes.draw do
   match '/signout', :to => 'sessions#destroy'
   
   match '/auth/:provider/callback', :to => 'sessions#createFacebookUser'
-
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @topic.name %>
+</p>
+
+<%= render :partial => 'posts/form' %>
+
+<div id="posts">
+  <% unless @posts.nil? %>
+    <% @posts.each do |c| %>
+      <% unless c.content.nil? %>
+      <div class="listing">
+        <%= c.content %>
+      </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+<div style="display:none">
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+</div>
+<%= link_to 'Back', forum_path(@forum) %>

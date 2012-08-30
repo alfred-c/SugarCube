@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @forum.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @forum.description %>
+</p>
+
+<div id="topics">
+  <% unless @topics.nil? %>
+  <% @topics.each do |topic| %>
+  <div class="listing">
+    <div class="class"><%= link_to topic.name, topic_path(topic) %></div>
+  </div>
+  <% end %>
+  <% end %>
+</div> <!-- div#topics -->
+
+<div style="display:none">
+  <%= link_to 'Edit', edit_forum_path(@forum) %> |
+</div>
+<%= link_to 'Back', forums_path %> | 
+
+<%= link_to 'New Topic', new_forum_topic_path(@forum) %>

@@ -1,0 +1,30 @@
+<%= form_for([@forum, @topic]) do |f| %>
+  <% if @topic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this conversation from being saved:</h2>
+
+      <ul>
+      <% @topic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<!-- <form method="post">
+          <textarea name="content" style="width:100%" id="mytextarea1" class="mceEditor"></textarea>
+          <input type="submit" value="Add journal" />
+    </form> -->
+  <!-- <textarea name="content" style="width:100%" id="mytextarea1" class="mceEditor"></textarea> -->
+  <!-- <input type="submit" value="Add journal" /> -->
+
+
+  <div class="field">
+    <%= f.text_field :name, :size => 60,  :class => 'mceEditor', :id => 'mytextarea1'%>
+    <!-- <textarea name="content" style="width:100%" id="mytextarea1" class="mceEditor"></textarea> -->
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
