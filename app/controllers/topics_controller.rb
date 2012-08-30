@@ -49,7 +49,7 @@ class TopicsController < ApplicationController
 
       respond_to do |format|
         if @topic.save
-          format.html { redirect_to(forum_topic_path(@forum, @topic), :notice => 'Topic was successfully created.') }
+          format.html { redirect_to(forum_topic_path(@forum, @topic), :notice => 'Journal was successfully created.') }
           format.xml  { render :xml => @topic, :status => :created, :location => @topic }
         else
           format.html { render :action => "new" }

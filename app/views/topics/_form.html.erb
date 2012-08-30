@@ -21,10 +21,9 @@
 
 
   <div class="field">
-    <%= f.text_field :name, :size => 60,  :class => 'mceEditor', :id => 'mytextarea1'%>
-    <!-- <textarea name="content" style="width:100%" id="mytextarea1" class="mceEditor"></textarea> -->
+    <%= f.text_area :name, :size => 60,  :class => 'mceEditor', :id => 'mytextarea1'%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add Journal" %>
   </div>
 <% end %>

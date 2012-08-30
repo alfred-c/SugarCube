@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @topic.name %>
+  <%= @topic.name.html_safe %>
 </p>
 
 <%= render :partial => 'posts/form' %>
