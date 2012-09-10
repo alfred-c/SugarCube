@@ -9,36 +9,49 @@
 			<li><a href="#sweethearts">SweetHearts</a></li>
 		</ul>
 	</div>
-   <div id="my-tab-content" class="tab-content">
-      <div class="tab-pane active" id="sugarboard">
-        <%= render 'pages/sugarboard' %>
-      </div>
-      <div class="tab-pane" id="sugarcube">
-          <h1>SugarCube</h1>
-          <p>orange orange orange orange orange</p>
-      </div>
-      <div class="tab-pane" id="sugarline">
-          <h1>SugarLine</h1>
-          <p>yellow yellow yellow yellow yellow</p>
-      </div>
-      <div class="tab-pane" id="journal">
-          <h1>Journal</h1>
-          <p>green green green green green</p>
-      </div>
-      <div class="tab-pane" id="polls">
-          <h1>Polls</h1>
-          <p>blue blue blue blue blue</p>
-      </div>
-      <div class="tab-pane" id="sweethearts">
-          <h1>SweetHearts</h1>
-          <p>blue blue blue blue blue</p>
-      </div>
-  </div>
+	<div id="my-tab-content" class="tab-content">
+		<div class="tab-pane active" id="sugarboard">
+			<%= render 'pages/sugarboard' %>
+		</div>
+		<div class="tab-pane" id="sugarcube">
+			<h1>SugarCube</h1>
+			<p>orange orange orange orange orange</p>
+		</div>
+		<div class="tab-pane" id="sugarline">
+			<h1>SugarLine</h1>
+			<p>yellow yellow yellow yellow yellow</p>
+		</div>
+		<div class="tab-pane" id="journal">
+			<h1>New Journal</h1>
+			<%= render 'form' %>
+			<%= link_to 'Back',topics_path %>
+		</div>
+		<div class="tab-pane" id="polls">
+			<h1>Polls</h1>
+			<p>blue blue blue blue blue</p>
+		</div>
+		<div class="tab-pane" id="sweethearts">
+			<h1>SweetHearts</h1>
+			<p>blue blue blue blue blue</p>
+		</div>
+	</div>
 </div>
+
+<script type="text/javascript" src="/assets/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
+tinyMCE.init({
+	mode : "textareas",
+	editor_selector : "mceEditor",
+	theme : "advanced",
+	theme_advanced_toolbar_location : "top",
+	theme_advanced_statusbar_location : "bottom",
+	theme_advanced_resizing : true
+});
+</script>
 
 <script type="text/javascript" src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-tabs.js"></script>
 <script type="text/javascript">
-   jQuery(document).ready(function ($) {
-       $(".tabs").tabs();
-   });
+jQuery(document).ready(function ($) {
+	$(".tabs").tabs();
+});
 </script>
