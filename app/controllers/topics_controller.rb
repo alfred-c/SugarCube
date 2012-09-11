@@ -88,8 +88,10 @@ class TopicsController < ApplicationController
 
     private
       def load_forum
-        @topic = Topic.find(1) # rescue redirect_to(forum_topics_path)
-        @forum = @topic.forum rescue redirect_to(forums_path)
+        # @topic = Topic.find(1) # rescue redirect_to(forum_topics_path)
+        #         @forum = @topic.forum rescue redirect_to(forums_path)
+        
+        @forum = Forum.find(1)
         
         # if (params[:id])
         #           @topic = Topic.find(params[:id]) # rescue redirect_to(forum_topics_path)
