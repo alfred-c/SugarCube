@@ -88,13 +88,16 @@ class TopicsController < ApplicationController
 
     private
       def load_forum
-        if (params[:id])
-          @topic = Topic.find(params[:id]) # rescue redirect_to(forum_topics_path)
-          @forum = @topic.forum rescue redirect_to(forums_path)
-        elsif (params[:forum_id])
-          @forum = Forum.find(params[:forum_id]) # rescue redirect_to(forums_path)
-        else # topics index
-          redirect_to(forums_path)
-        end
+        @topic = Topic.find(2) # rescue redirect_to(forum_topics_path)
+        @forum = @topic.forum rescue redirect_to(forums_path)
+        
+        # if (params[:id])
+        #           @topic = Topic.find(params[:id]) # rescue redirect_to(forum_topics_path)
+        #           @forum = @topic.forum rescue redirect_to(forums_path)
+        #         elsif (params[:forum_id])
+        #           @forum = Forum.find(params[:forum_id]) # rescue redirect_to(forums_path)
+        #         else # topics index
+        #           redirect_to(forums_path)
+        #         end
       end
   end
