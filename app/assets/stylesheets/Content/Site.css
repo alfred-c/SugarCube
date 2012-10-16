@@ -1,0 +1,328 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.item
+{
+    padding: 5px;
+}
+
+[class^="v-"],
+[class*=" v-"] {
+	margin-bottom:10px;
+}
+.v-1
+{
+	height: 130px;
+
+}
+.v-2
+{
+	height: 290px;
+}
+
+[class^="h-"],
+[class*=" h-"] {
+	margin-left:10px;
+}
+.h-1
+{
+	width: 130px;
+}
+.h-2
+{
+	width: 290px;
+}
+
+.cube {
+    border: 5px solid #00B4FF !important; /*f23996*/
+    /*background-color: #00B4FF !important;*/
+}
+
+.pink {
+    color: #f23996;
+}
+
+.green {
+color: #b3fa3b;
+}
+
+.purple {
+    color: #b43ee7;
+}
+
+.blue {
+    color: #00B4FF;
+}
+
+
+/**** Isotope filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* icons */
+[class^="sc-icon-"],
+[class*=" sc-icon-"] {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 40px;
+  vertical-align: text-top;
+  background-image: url("images/icons.png");
+  background-position: 40px 40px;
+  background-repeat: no-repeat;
+}
+
+.sc-icon-happy {
+  background-position: -119px -16px;
+}
+
+.sc-icon-heartbreak {
+  background-position: -121px -116px;
+}
+
+.sc-icon-work {
+  background-position: -120px -218px;
+}
+
+
+.sc-icon-finance {
+  background-position: -118px -319px;
+}
+
+.sc-icon-family {
+  background-position: -120px -425px;
+}
+
+.sc-icon-misc {
+  background-position: -120px -524px;
+}
+
+.sc-icon-happy-white {
+  background-position: -17px      -16px;
+}
+
+.sc-icon-heartbreak-white {
+  background-position: -18px -116px;
+}
+
+.sc-icon-work-white {
+  background-position: -19px -218px;
+}
+
+.sc-icon-finance-white {
+  background-position: -16px -319px;
+}
+
+.sc-icon-family-white {
+  background-position: -18px -425px;
+}
+
+.sc-icon-misc-white {
+  background-position: -18px -524px;
+}
+
+/* icons */
+[class^="sc-icon-sm-"],
+[class*=" sc-icon-sm-"] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 20px;
+  vertical-align: text-top;
+  background-image: url("images/icons-sm.png");
+  background-position: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.sc-icon-sm-happy {
+  background-position: -62px -8px;
+}
+
+.sc-icon-sm-heartbreak {
+  background-position: -62px -60px;
+}
+
+.sc-icon-sm-work {
+  background-position: -62px -114px;
+}
+
+
+.sc-icon-sm-finance {
+  background-position: -60px -166px;
+}
+
+.sc-icon-sm-family {
+  background-position: -62px -221px;
+}
+
+.sc-icon-sm-misc {
+  background-position: -62px -272px;
+}
+
+.sc-icon-sm-happy-white {
+  background-position: -10px -8px;
+}
+
+.sc-icon-sm-heartbreak-white {
+  background-position: -10px -60px;
+}
+
+.sc-icon-sm-work-white {
+  background-position: -10px -114px;
+}
+
+.sc-icon-sm-finance-white {
+  background-position: -8px -166px;
+}
+
+.sc-icon-sm-family-white {
+  background-position: -10px -221px;
+}
+
+.sc-icon-sm-misc-white {
+  background-position: -10px -272px;
+}
+
+div[contenteditable], .editablecontent  {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.background-color {
+    background-color: #f23996;
+}
+.foreground-color {
+    color: #f23996;
+}
+
+.selected {
+    color: #f23996;
+}
+
+.unselected {
+    color: #ccc;
+}
+
+/*.btn-primary {
+    background-color: #f23996;
+}
+
+    .btn-primary:hover {
+           background-color: #cf3884;
+    }*/
+
+/*a {
+     color: #f23996;
+}*/
+
