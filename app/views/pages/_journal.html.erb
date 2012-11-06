@@ -1,4 +1,11 @@
-<form accept-charset="UTF-8" action="/topics" method="post">
+<script type="text/javascript">
+    function getContent(){
+        document.getElementById("topic_title").value = document.getElementById("topic_title_div").innerHTML;
+        document.getElementById("topic_name").value = document.getElementById("topic_name_div").innerHTML;
+    }
+</script>
+
+<form accept-charset="UTF-8" action="/topics" method="post" onsubmit="return getContent()">
 <div class="row-fluid">
 	<div class="span12">
 		<form class="form-horizontal" method="post">
@@ -15,15 +22,15 @@
 					<div class="control-group">
 						<label class="control-label">Title:</label>
 						<div class="controls">
-							<!-- <input id="topic_title" name="topic[title]" type="text"></input> -->
-							<div contenteditable="true" name="topic[title]" id="topic_title" data-target="title" style="min-height: 20px;"></div>
+							<input id="topic_title" name="topic[title]" type="text" style="display:none"></input>
+							<div contenteditable="true" name="topic[title]" id="topic_title_div" data-target="title" style="min-height: 20px;"></div>
 						</div>
 					</div>
 					<div class="control-group">
 						<label class="control-label" for="entry">Content:</label>
 						<div class="controls">
-							<textarea name="entry" style="display:none;"></textarea>
-							<div contenteditable="true" id="entry" data-target="entry" style="min-height: 150px;"></div>
+							<textarea id="topic_name" name="topic[name]" type="text" style="display:none;"></textarea>
+							<div contenteditable="true" id="topic_name_div" data-target="entry" style="min-height: 150px;"></div>
 						</div>
 					</div>
 					<div class="control-group">

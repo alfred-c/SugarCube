@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 <p>
-  <%= @topic.title %>
+  <%= @topic.title.html_safe%>
 </p>
 <p>
   <%= @topic.created_at %>
 </p>
 <p>
-  <%= @topic.name %>
+  <%= @topic.name.html_safe %>
 </p>
 
 <%= render :partial => 'posts/form' %>
