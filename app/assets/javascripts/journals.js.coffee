@@ -15,6 +15,6 @@ $(function(){
 		    { name: 'colors', items: ['TextColor', 'BGColor'] },
 	]});
 
-	$("#journal_date").datepicker();
+	$("#topic_date").datepicker();
 
 });

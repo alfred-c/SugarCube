@@ -1,8 +1,12 @@
 <script type="text/javascript">
-    function getContent(){
-        document.getElementById("topic_title").value = document.getElementById("topic_title_div").innerHTML;
-        document.getElementById("topic_name").value = document.getElementById("topic_name_div").innerHTML;
-    }
+	window.onload = function () {
+		$('input.datepicker').datepicker().datepicker("setDate", "+0");
+	}
+
+	function getContent(){
+		document.getElementById("topic_title").value = document.getElementById("topic_title_div").innerHTML;
+		document.getElementById("topic_name").value = document.getElementById("topic_name_div").innerHTML;
+	}
 </script>
 
 <form accept-charset="UTF-8" action="/topics" method="post" onsubmit="return getContent()">
@@ -15,9 +19,7 @@
 				<div class="span8">
 					<div class="control-group">
 						<label class="control-label" for="inputDate">Date:</label>
-						<div class="controls">
-							<input id="date" type="text" class="datepicker" />
-						</div>
+						<input type="text" value="" class="datepicker"/>
 					</div>
 					<div class="control-group">
 						<label class="control-label">Title:</label>
@@ -49,7 +51,7 @@
 							<a href="#" rel="tooltip" class="btn" data-toggle="button" title="heartbreak"><i class="sc-icon-sm-heartbreak"></i></a>
 							<a href="#" rel="tooltip" class="btn" data-toggle="button" title="work"><i class="sc-icon-sm-work"></i></a>
 							<a href="#" rel="tooltip" class="btn" data-toggle="button" title="finance"><i class="sc-icon-sm-finance"></i></a>
-							<a href="#" rel="tooltip" class="btn" data-toggle="button" title="family, culture, & beliefs""><i class="sc-icon-sm-family"></i></a>
+							<a href="#" rel="tooltip" class="btn" data-toggle="button" title="family, culture, beliefs"><i class="sc-icon-sm-family"></i></a>
 							<a href="#" rel="tooltip" class="btn" data-toggle="button" title="misc"><i class="sc-icon-sm-misc"></i></a>
 							<input type="hidden" name="categories" />
 						</div>
