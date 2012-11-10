@@ -1,12 +1,59 @@
 <script type="text/javascript">
 	window.onload = function () {
 		$('input.datepicker').datepicker().datepicker("setDate", "+0");
+		
+		$("#viewable").slider({
+			orientation: "vertical",
+			range: "min",
+			min: 0,
+			max: 9,
+			value: 2,
+			step: 1,
+			slide: function (event, ui) {
+				$("#viewable-value").val(ui.value);
+				if ($("#commentable").slider("value") > ui.value) {
+					$("#commentable").slider("value", ui.value);
+				}
+			}
+		});
+		$("#viewable-value").val($("#viewable").slider("value"));
+
+		$("#commentable").slider({
+			orientation: "vertical",
+			range: "min",
+			min: 0,
+			max: 9,
+			value: 2,
+			step: 1,
+			slide: function (event, ui) {
+				$("#commentable-value").val(ui.value);
+				if ($("#viewable").slider("value") < ui.value) {
+					$("#viewable").slider("value", ui.value);
+				}
+			}
+		});
+		$("#commentable-value").val($("#commentable").slider("value"));
+
+		$("#anonymous").slider({
+			orientation: "vertical",
+			range: "min",
+			min: 0,
+			max: 9,
+			value: 2,
+			step: 1,
+			slide: function (event, ui) {
+				$("#anonymous-value").val(ui.value);
+			}
+		});
 	}
 
 	function getContent(){
 		document.getElementById("topic_title").value = document.getElementById("topic_title_div").innerHTML;
 		document.getElementById("topic_name").value = document.getElementById("topic_name_div").innerHTML;
 	}
+	
+	
+	
 </script>
 
 <form accept-charset="UTF-8" action="/topics" method="post" onsubmit="return getContent()">
@@ -72,10 +119,10 @@
 							<span class="add-on"><i class="icon-search foreground-color"></i></span>
 							<input type="text" class="span9" />
 						</div>
-						@foreach (SelectListItem item in Model.Tags)
-						{
-							<a class="label" data-value="@item.Value">@item.Text</a>
-						}
+						<!-- @foreach (SelectListItem item in Model.Tags)
+												{
+													<a class="label" data-value="@item.Value">@item.Text</a>
+												} -->
 						<br />
 						<span id="addTag" contenteditable="true" style="color: #aaa; width:150px; display: inline-block;">Add new tag</span>
 						<br />
@@ -83,37 +130,33 @@
 						<input type="hidden" name="tags" style="display:none;" />
 					</div>
 					<div class="tab-pane" id="tab2">
-						<div class="row-fluid">
+						<div class="row-fluid tooltips">
 							<input type="hidden" id="commentable-value" />
 							<input type="hidden" id="viewable-value" />
 							<div class="span1">
-								<label><i class="icon-eye-open selected"></i></label>
-								<div id="viewable" style="height: 266px;"></div>
+								<a href="#" rel="tooltip" title="viewable" style="text-decoration: none;"><i class="icon-eye-open selected"></i></a>
+								<div id="viewable" style="height: 225px;"></div>
 							</div>
 							<div class="span1">
-								<label><i class="icon-comment selected"></i></label>
-								<div id="commentable" style="height: 266px;"></div>
+								<a href="#" rel="tooltip" title="commentable" style="text-decoration: none;"><i class="icon-comment selected"></i></a>
+								<div id="commentable" style="height: 225px;"></div>
 							</div>
-							<div class="span8" style="line-height:29px; padding-top:15px;">
-
-								@foreach (SelectListItem item in Model.Permissions)
-								{
-									<a href="#" class="permission">@item.Text</a><br />
-								}
+							<div class="span1">
+								<a href="#" rel="tooltip" title="anonymous" style="text-decoration: none;"><i class="icon-ban-circle selected"></i></a>
+								<div id="anonymous" style="height: 225px;"></div>
 							</div>
-						</div>
+							<div class="span7" style="line-height: 25px; padding-top: 15px; white-space: nowrap;">
 
-						<div class="row-fluid">
-							<div class="span12">
-								@foreach (SelectListItem item in Model.Permissions)
-								{
-									<span  data-value="@item.Value"><a href="#" style="text-decoration:none;" ><i class="icon-eye-open unselected"></i></a> <a href="#" style="text-decoration:none;"><i class="icon-comment unselected" ></i></a> <a href="#" class="permission">@item.Text</a></span><br />
-								}
+								<!-- @foreach (SelectListItem item in Model.Permissions)
+															{
+																@*<a href="#" class="permission">@item.Text</a><br />*@
+																<a href="#">@item.Text</a><br />
+															} -->
 							</div>
 						</div>
 						<a href="#">Manage crowds</a>
-						<input type="hidden" name="visible" style="display:none;" />
-						<input type="hidden" name="comment" style="display:none;" />
+						<input type="hidden" name="visible" style="display: none;" />
+						<input type="hidden" name="comment" style="display: none;" />
 					</div>
 				</div>
 			</div>
